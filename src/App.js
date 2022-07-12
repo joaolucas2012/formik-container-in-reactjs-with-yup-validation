@@ -1,13 +1,13 @@
-import "./App.css";
+import { AppContainer, CenterContainer } from "./styles/GlobalStyle";
 import { FormikContainer } from "./components/FormikContainer";
 
 function App() {
   return (
-    <div className="App">
-      <div className="center">
+    <AppContainer>
+      <CenterContainer>
         <FormikContainer />
-      </div>
-    </div>
+      </CenterContainer>
+    </AppContainer>
   );
 }
 

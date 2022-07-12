@@ -1,5 +1,6 @@
 import React from "react";
 import { Formik, Form } from "formik";
+import {Button} from "../styles/GlobalStyle";
 import * as Yup from "yup";
 import FormikControl from "./FormikControl";
 
@@ -76,18 +77,18 @@ export function FormikContainer() {
             name='radioOption'
             options={radioOptions}
           />
-          <FormikControl 
-            control='checkbox' 
-            label='Checkbox topics' 
-            name='checkboxOption' 
-            options={checkboxOptions} 
+          <FormikControl
+            control='checkbox'
+            label='Checkbox topics'
+            name='checkboxOption'
+            options={checkboxOptions}
           />
-          <FormikControl 
-            control='date' 
-            label='Pick a date' 
-            name='birthDate' 
+          <FormikControl
+            control='date'
+            label='Pick a date'
+            name='birthDate'
           />
-          <button className="button" type="submit">Submit</button>
+          <Button className="button" type="submit">Submit</Button>
         </Form>
       )}
     </Formik>

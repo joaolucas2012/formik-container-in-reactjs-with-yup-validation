@@ -1,12 +1,13 @@
 import React from 'react'
 import { Field, ErrorMessage } from 'formik'
+import { FormControl, Label } from '../styles/GlobalStyle'
 import TextError from './TextError'
 
 function RadioButtons(props) {
     const { label, name, options, ...rest } = props
     return (
-        <div className='form-control'>
-            <label>{label}</label>
+        <FormControl>
+            <Label>{label}</Label>
             <Field name={name} >
                 {({ field }) => {
                     return options.map(option => {
@@ -27,7 +28,7 @@ function RadioButtons(props) {
                 }}
             </Field>
             <ErrorMessage component={TextError} name={name} />
-        </div>
+        </FormControl>
     )
 }
 
