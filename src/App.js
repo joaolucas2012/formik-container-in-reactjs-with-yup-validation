@@ -1,15 +1,14 @@
 import "./App.css";
-import { RegistrationForm } from "./components/RegistrationForm";
+import { EnrollmentForm } from "./components/EnrollmentForm";
 
 function App() {
   return (
     <div className="App">
       <div className="center">
-        <RegistrationForm />
+        <EnrollmentForm />
       </div>
     </div>
   );
 }
 
 export default App;
-
