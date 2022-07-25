@@ -3,7 +3,7 @@
   justify-content: center;
 }
 
-label {
+/* label {
   font-weight: bold;
   display: flex;
   margin-bottom: 5px;
@@ -13,9 +13,9 @@ input + label {
   font-weight: bold;
   display: inline-flex;
   margin-right: 20px;
-}
+} */
 
-input[type="text"],
+/* input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea,
@@ -30,8 +30,8 @@ select {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
-  /* margin-bottom: 20px; */
-}
+  // margin-bottom: 20px; 
+} */
 
 .center {
   height: 80vh;
@@ -48,17 +48,17 @@ select {
   color: red;
 }
 
-.button{
+.button {
   width: 80px;
   height: 30px;
-  background-color: rgb(27, 168, 126); 
+  background-color: rgb(27, 168, 126);
   color: white;
   border-radius: 5px;
   font-weight: bold;
   border: none;
 }
 
-.button:hover{
+.button:hover {
   cursor: pointer;
-  background-color: rgb(35, 216, 162); 
+  background-color: rgb(35, 216, 162);
 }
