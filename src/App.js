@@ -1,13 +1,18 @@
 import "./App.css";
-import { EnrollmentForm } from "./components/EnrollmentForm";
+import { Routes, Route } from "react-router-dom";
+import { EnrollmentForm } from "./pages/EnrollmentForm";
+import { LoginForm } from "./pages/LoginForm";
+import { RegistrationForm } from "./pages/RegistrationForm";
+import { FormikContainer } from "./pages/FormikContainer";
 
 function App() {
   return (
-    <div className="App">
-      <div className="center">
-        <EnrollmentForm />
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<EnrollmentForm />} />
+      <Route path="/login" element={<LoginForm />} />
+      <Route path="/registration" element={<RegistrationForm />} />
+      <Route path="/container" element={<FormikContainer />} />
+    </Routes>
   );
 }
 
