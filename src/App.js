@@ -4,15 +4,19 @@ import { EnrollmentForm } from "./pages/EnrollmentForm";
 import { LoginForm } from "./pages/LoginForm";
 import { RegistrationForm } from "./pages/RegistrationForm";
 import { FormikContainer } from "./pages/FormikContainer";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<EnrollmentForm />} />
-      <Route path="/login" element={<LoginForm />} />
-      <Route path="/registration" element={<RegistrationForm />} />
-      <Route path="/container" element={<FormikContainer />} />
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/registration" element={<RegistrationForm />} />
+        <Route path="/enrollment" element={<EnrollmentForm />} />
+        <Route path="/info" element={<FormikContainer />} />
+      </Routes>
+    </>
   );
 }
 

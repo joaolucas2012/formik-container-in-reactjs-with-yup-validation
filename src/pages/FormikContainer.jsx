@@ -1,7 +1,8 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom'
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import FormikControl from "../components/FormikControl";
+import FormikControl from "../components/FormComponents/FormikControl";
 import { Centralizer } from '../components/Centralizer';
 
 export function FormikContainer() {
@@ -42,9 +43,12 @@ export function FormikContainer() {
     birthDate: Yup.date().required('Please, choose a date').nullable()
   });
 
+  const navigate = useNavigate()
+
   const onSubmit = (values) => {
     console.log("Form data", values);
     console.log('Saved data', JSON.parse(JSON.stringify(values)))
+    navigate('/login')
   }
   return (
     <Centralizer>
