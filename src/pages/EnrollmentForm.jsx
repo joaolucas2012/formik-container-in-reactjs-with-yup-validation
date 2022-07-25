@@ -1,7 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import FormikControl from '../components/FormikControl';
+import FormikControl from '../components/FormComponents/FormikControl';
 import { Centralizer } from '../components/Centralizer';
 
 export function EnrollmentForm() {
@@ -33,8 +34,11 @@ export function EnrollmentForm() {
         courseDate: Yup.date().required('Required').nullable(),
     })
 
+    const navigate = useNavigate()
+
     const onSubmit = values => {
         console.log('Form data', values)
+        navigate('/info')
     }
 
     return (
