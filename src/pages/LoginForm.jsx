@@ -25,6 +25,7 @@ export function LoginForm() {
                 {
                     formik => {
                         return <Form>
+                            <h3>Sign in to your account</h3>
                             <FormikControl
                                 control='input'
                                 type='email'
@@ -37,7 +38,7 @@ export function LoginForm() {
                                 label='Password'
                                 name='password'
                             />
-                            <button type='submit' disabled={!formik.isValid}>Submit</button>
+                            <button type='submit' className='button' disabled={!formik.isValid}>Submit</button>
                         </Form>
                     }
                 }

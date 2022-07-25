@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
 import { EnrollmentForm } from "./pages/EnrollmentForm";
 import { LoginForm } from "./pages/LoginForm";
 import { RegistrationForm } from "./pages/RegistrationForm";
@@ -11,6 +12,7 @@ function App() {
     <>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/registration" element={<RegistrationForm />} />
         <Route path="/enrollment" element={<EnrollmentForm />} />
