@@ -75,7 +75,7 @@ export function EnrollmentForm() {
                                 label='Course date'
                                 name='courseDate'
                             />
-                            <button type='submit' disabled={!formik.isValid}>
+                            <button type='submit' className='button' disabled={!formik.isValid}>
                                 Submit
                             </button>
                         </Form>

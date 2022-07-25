@@ -59,6 +59,7 @@ export function FormikContainer() {
       >
         {(formik) => (
           <Form>
+            <h3>Share your information!</h3>
             <FormikControl
               control='input'
               type='email'
