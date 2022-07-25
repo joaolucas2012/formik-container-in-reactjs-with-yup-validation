@@ -1,7 +1,8 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import FormikControl from "./FormikControl";
+import FormikControl from "../components/FormikControl";
+import { Centralizer } from '../components/Centralizer';
 
 export function FormikContainer() {
   const dropdownOptions = [
@@ -46,50 +47,52 @@ export function FormikContainer() {
     console.log('Saved data', JSON.parse(JSON.stringify(values)))
   }
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={onSubmit}
-    >
-      {(formik) => (
-        <Form>
-          <FormikControl
-            control='input'
-            type='email'
-            label='Email'
-            name='email'
-          />
-          <FormikControl
-            control='textarea'
-            label='Description'
-            name='description'
-          />
-          <FormikControl
-            control='select'
-            label='Select a topic'
-            name='selectOption'
-            options={dropdownOptions}
-          />
-          <FormikControl
-            control='radio'
-            label='Radio topic'
-            name='radioOption'
-            options={radioOptions}
-          />
-          <FormikControl 
-            control='checkbox' 
-            label='Checkbox topics' 
-            name='checkboxOption' 
-            options={checkboxOptions} 
-          />
-          <FormikControl 
-            control='date' 
-            label='Pick a date' 
-            name='birthDate' 
-          />
-          <button className="button" type="submit">Submit</button>
-        </Form>
-      )}
-    </Formik>
+    <Centralizer>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={onSubmit}
+      >
+        {(formik) => (
+          <Form>
+            <FormikControl
+              control='input'
+              type='email'
+              label='Email'
+              name='email'
+            />
+            <FormikControl
+              control='textarea'
+              label='Description'
+              name='description'
+            />
+            <FormikControl
+              control='select'
+              label='Select a topic'
+              name='selectOption'
+              options={dropdownOptions}
+            />
+            <FormikControl
+              control='radio'
+              label='Radio topic'
+              name='radioOption'
+              options={radioOptions}
+            />
+            <FormikControl
+              control='checkbox'
+              label='Checkbox topics'
+              name='checkboxOption'
+              options={checkboxOptions}
+            />
+            <FormikControl
+              control='date'
+              label='Pick a date'
+              name='birthDate'
+            />
+            <button className="button" type="submit">Submit</button>
+          </Form>
+        )}
+      </Formik>
+    </Centralizer>
   );
 }

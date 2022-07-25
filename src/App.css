@@ -1,6 +1,10 @@
 .App {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(23, 28, 26);
 }
 
 label {
@@ -38,6 +42,10 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(250, 247, 247);
+  width: 40%;
+  height: 90%;
+  border-radius: 10px;
 }
 
 .form-control {
@@ -48,17 +56,17 @@ select {
   color: red;
 }
 
-.button{
+.button {
   width: 80px;
   height: 30px;
-  background-color: rgb(27, 168, 126); 
+  background-color: rgb(27, 168, 126);
   color: white;
   border-radius: 5px;
   font-weight: bold;
   border: none;
 }
 
-.button:hover{
+.button:hover {
   cursor: pointer;
-  background-color: rgb(35, 216, 162); 
+  background-color: rgb(35, 216, 162);
 }
