@@ -5,6 +5,7 @@ import { EnrollmentForm } from "./pages/EnrollmentForm";
 import { LoginForm } from "./pages/LoginForm";
 import { RegistrationForm } from "./pages/RegistrationForm";
 import { FormikContainer } from "./pages/FormikContainer";
+import { NoMatch } from "./pages/NoMatch";
 import { Navbar } from "./components/Navbar";
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/registration" element={<RegistrationForm />} />
-        <Route path="/enrollment" element={<EnrollmentForm />} />
-        <Route path="/info" element={<FormikContainer />} />
+        <Route path="login" element={<LoginForm />} />
+        <Route path="registration" element={<RegistrationForm />} />
+        <Route path="enrollment" element={<EnrollmentForm />} />
+        <Route path="info" element={<FormikContainer />} />
+        <Route path="*" element={<NoMatch />} />
       </Routes>
     </>
   );
